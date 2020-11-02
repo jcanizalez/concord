@@ -1,3 +1,10 @@
 flows:
   default:
   - log: "Hello Concord User"
+
+triggers:
+- github:
+    entryPoint: "onPush"
+    conditions:
+      type: "push"
+      branch: "master"
